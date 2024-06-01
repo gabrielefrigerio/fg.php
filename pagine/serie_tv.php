@@ -12,22 +12,8 @@
     </head>
     <body>
         <div class="contenitore-g">
-            <header class="header clearfix">
-                <a href="" class="header_logo"><img src="../logor.jpg"></a>
-                <a href="" class="header_bar">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
-
-                <ul class="header_menu animate">
-                    <li class="header_menu_item"><a href="../home.html">HOME</a></li>
-                    <li class="header_menu_item"><a href="../Film/film.html">Film</a></li>
-                    <li class="header_menu_item"><a href="../Altre Pag.html/nuovi arrivi.html">Nuovi Arrivi</a></li>
-                    <li class="header_menu_item"><a href="../Altre Pag.html/Grandi Classici.html">Grandi Classici</a></li>
-                    <li class="header_menu_item"><a href="../Altre Pag.html/da non perdere.html">Da non perdere</a></li>
-                    <li class="header_menu_item"><a href="../Altre Pag.html/contatti.html">Contatti</a></li>
-                </ul>
+            <header>
+                <?php require('nav.php') ?>
             </header>
             <div class="grid-immagini">
                 <ul class="galleria">

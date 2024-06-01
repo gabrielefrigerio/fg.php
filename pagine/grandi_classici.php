@@ -12,23 +12,10 @@
     </head>
     <body>
         <div class="contenitore-g">
-            <header class="header clearfix">
-                <a href="" class="header_logo"><img src="../logor.jpg"></a>
-                <a href="" class="header_bar">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
-
-                <ul class="header_menu animate">
-                    <li class="header_menu_item"><a href="../home.html">HOME</a></li>
-                    <li class="header_menu_item"><a href="../Film/film.html">FILM</a></li>
-                    <li class="header_menu_item"><a href="../Serie Tv/serie-tv.html">SERIE-TV</a></li>
-                    <li class="header_menu_item"><a href="../Altre Pag.html/nuovi arrivi.html">NUOVI ARRIVI</a></li>
-                    <li class="header_menu_item"><a href="../Altre Pag.html/da non perdere.html">DA NON PERDERE</a></li>
-                    <li class="header_menu_item"><a href="#">CONTATTI</a></li>
-                </ul>
+            <header>
+                <?php require('nav.php') ?>
             </header>
+
             <div class="grid-immagini">
                 <ul class="galleria">
                     <li class="card-item">
