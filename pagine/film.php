@@ -1,7 +1,7 @@
 <html>
     <head >
         <meta charset="UTF-8" />
-        <title>Film</title>
+        <title>TFR | Film</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="../CSS/style.css">
         <script src="../JAVA/script.js" defer></script>
@@ -13,13 +13,13 @@
     <body>
         <div class="contenitore-g">
             <header>
-                <?php require('nav.php') ?>
+                <?php require('pezzi/nav.php') ?>
             </header>
 
             <div class="grid-immagini">
                 <ul class="galleria">
                     <li class="card-item">
-                        <a href="film d'avventura/filmd'avventura.html">
+                        <a href="../Film/generi/filmd'avventura.php">
                             <figure class="card">
                                 <img src="../immagini/Film/Film Avventura.png">
                                 <figcaption>Film d'avventura</figcaption>
@@ -27,7 +27,7 @@
                         </a>
                     </li>
                     <li class="card-item">
-                        <a href="film horror/Horror.html">
+                        <a href="../Film/generi/Horror.php">
                             <figure class="card">
                                 <img src="../immagini/Film/Film Horror.png">
                                 <figcaption>Horror</figcaption>
@@ -35,7 +35,7 @@
                         </a>
                     </li>
                     <li class="card-item">
-                        <a href="film d'azione/filmdazione.html">
+                        <a href="../Film/generi/filmdazione.php">
                             <figure class="card">
                                 <img src="../immagini/Film/Film azione.png">
                                 <figcaption>Film d'azione</figcaption>
@@ -43,7 +43,7 @@
                         </a>
                     </li>
                     <li class="card-item">
-                        <a href="film western/western.html">
+                        <a href="../Film/generi/western.php">
                             <figure class="card">
                                 <img src="../immagini/Film/Film western.png">
                                 <figcaption>Western</figcaption>
@@ -51,7 +51,7 @@
                         </a>
                     </li>
                     <li class="card-item">
-                        <a href="filmdrammatici/filmdrammatici.html">
+                        <a href="../Film/generi/filmdrammatici.php">
                             <figure class="card">
                                 <img src="../immagini/Film/Film Drammatici.png">
                                 <figcaption>Film Drammatici</figcaption>
@@ -59,7 +59,7 @@
                         </a>
                     </li>
                     <li class="card-item">
-                        <a href="film romantici/filmromatici.html">
+                        <a href="../Film/generi/filmromatici.php">
                             <figure class="card">
                                 <img src="../immagini/Film/Film romantici.png">
                                 <figcaption>Romantici</figcaption>
@@ -67,7 +67,7 @@
                         </a>
                     </li>
                     <li class="card-item">
-                        <a href="film commedie/filmcommedie.html">
+                        <a href="../Film/generi/filmcommedie.php">
                             <figure class="card">
                                 <img src="../immagini/Film/Commedie.png">
                                 <figcaption>Commedie</figcaption>
@@ -80,9 +80,7 @@
         </div>
 
         <footer>
-            <div class="footer"><br>&copy; 2024 </br>
-              <br> Lavoro realizzato da Brambillasca Davide e Contini Federico</br>  
-              <br> The Film Review All rights reserved.</br></div>
+            <?php require('pezzi/footer.php') ?>
         </footer>
 
 

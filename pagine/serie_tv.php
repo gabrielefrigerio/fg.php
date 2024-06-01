@@ -1,7 +1,7 @@
 <html>
     <head >
         <meta charset="UTF-8" />
-        <title>Serie Tv</title>
+        <title>TFR | Serie Tv</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="../CSS/style.css">
         <script src="../JAVA/script.js" defer></script>
@@ -13,7 +13,7 @@
     <body>
         <div class="contenitore-g">
             <header>
-                <?php require('nav.php') ?>
+                <?php require('pezzi/nav.php') ?>
             </header>
             <div class="grid-immagini">
                 <ul class="galleria">
@@ -53,11 +53,11 @@
                 </ul>
             </div>
         </div>
+
         <footer>
-            <div class="footer"><br>&copy; 2024 </br>
-              <br> Lavoro realizzato da Brambillasca Davide e Contini Federico</br>  
-              <br> The Film Review All rights reserved.</br></div>
+            <?php require('pezzi/footer.php') ?>
         </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){

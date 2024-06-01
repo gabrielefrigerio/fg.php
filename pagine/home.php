@@ -13,7 +13,7 @@
   <body>
     <div class="contenitore-g">
       <header>
-        <?php require('nav.php') ?>
+        <?php require('pezzi/nav.php') ?>
       </header>
 
       <div class="slide">
@@ -135,34 +135,15 @@
               </div>
             </a>
           </div>
-
-          <div class="card">
-            <a href="../Film/film western/ilbuono.html">
-              <img src="../immagini/Film/Film D'avventura/Fa-Dune.jpg"alt="poster1" />
-              <div class="content">
-                <h1 class="name">Dune 2 (2024)</h1>
-                <h3 class="infos">
-                  <i class="fa-solid fa-star"></i> 4.7/5 | 2024-02-29 | 165 Min
-                </h3>
-                <p class="short-desc">
-                  Dune - Parte Due, film diretto da Denis Villeneuve, 
-                  è il secondo capitolo della saga sci-fi tratta dal romanzo di Frank Herbert.
-                </p>
-                <div class="icons">
-                  <a href="#"><i class="fa-solid fa-heart"></i></a>
-                  <a href="#"><i class="fa-solid fa-bookmark"></i></a>
-                  <a href="#"><i class="fa-solid fa-share"></i></a>
-                </div>
-              </div>
-            </a>
-          </div>
                   
         </div>
       </div>
     </div>
 
-    <?php require('footer.php') ?>
-
+    <footer>
+      <?php require('pezzi/footer.php') ?>
+    </footer>
+ 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script>

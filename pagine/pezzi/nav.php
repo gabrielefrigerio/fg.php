@@ -8,6 +8,7 @@
             //} elseif (basename($_SERVER['PHP_SELF']) == "registrazione.php") {
             //    echo "<li><a href='../index.php'>Login</a></li>";
             //} else {
+            if (basename($_SERVER['PHP_SELF']) == "home.php" or basename($_SERVER['PHP_SELF']) == "film.php" or basename($_SERVER['PHP_SELF']) == "serie_tv.php" or basename($_SERVER['PHP_SELF']) == "nuovi_arrivi.php" or basename($_SERVER['PHP_SELF']) == "grandi_classici.php" or basename($_SERVER['PHP_SELF']) == "dnp.php") {
                 if (basename($_SERVER['PHP_SELF']) == "home.php") {
                     echo "<li class='header_menu_item' id='active'><a href='home.php'>HOME</a></li>";
                 } else {
@@ -38,7 +39,10 @@
                 } else {
                     echo "<li class='header_menu_item'><a href='dnp.php'>Da non perdere</a></li>";
                 }
-            //}
+            }
+            elseif(basename($_SERVER['PHP_SELF']) == "filmcommedie.php" or basename($_SERVER['PHP_SELF']) == "filmd'avventura.php" or basename($_SERVER['PHP_SELF']) == "filmdazione.php" or basename($_SERVER['PHP_SELF']) == "filmdrammatici.php" or basename($_SERVER['PHP_SELF']) == "filmromantici.php" or basename($_SERVER['PHP_SELF']) == "Horror.php" or basename($_SERVER['PHP_SELF']) == "western.php") {
+                echo "<li class='header_menu_item'><a href='../../pagine/film.php'>Torna indietro</a></li>";
+            }
         ?>
     </ul>
 </div>
