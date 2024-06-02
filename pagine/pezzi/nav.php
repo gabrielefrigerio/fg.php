@@ -1,5 +1,5 @@
 <div class="header clearfix">
-    <a href="" class="header_logo"><img src="logor.jpg"></a>
+    <a href="home.php" class="header_logo"><img src="pezzi/logor.jpg"></a>
 
     <ul class="header_menu animate">
         <?php
@@ -40,8 +40,11 @@
                     echo "<li class='header_menu_item'><a href='dnp.php'>Da non perdere</a></li>";
                 }
             }
-            elseif(basename($_SERVER['PHP_SELF']) == "filmcommedie.php" or basename($_SERVER['PHP_SELF']) == "filmd'avventura.php" or basename($_SERVER['PHP_SELF']) == "filmdazione.php" or basename($_SERVER['PHP_SELF']) == "filmdrammatici.php" or basename($_SERVER['PHP_SELF']) == "filmromantici.php" or basename($_SERVER['PHP_SELF']) == "Horror.php" or basename($_SERVER['PHP_SELF']) == "western.php") {
-                echo "<li class='header_menu_item'><a href='../../pagine/film.php'>Torna indietro</a></li>";
+            elseif(basename($_SERVER['PHP_SELF']) == "generi_film.php") {
+                echo "<li class='header_menu_item'><a href='film.php'>Torna indietro</a></li>";
+            }
+            elseif(basename($_SERVER['PHP_SELF']) == "generi_serie.php") {
+                echo "<li class='header_menu_item'><a href='serie_tv.php'>Torna indietro</a></li>";
             }
         ?>
     </ul>
