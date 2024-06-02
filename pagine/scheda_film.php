@@ -1,19 +1,19 @@
 <?php
-    if (!isset($_GET["cod_film"])) {
+    if (!isset($_GET["film_id"])) {
         die("Errore! manca un parametro essenziale per il caricamento del libro!");
     } else {
-        $cod_film = $_GET["cod_film"];
+        $film_id = $_GET["film_id"];
         require("../data/connessione_db.php");
-        $sql = "SELECT film.cod_film, film.titolo, film.genere, film.descrizione_txt, film.regista, film.durata, film.lingua, film.settings, film.casa_produttrice, film.trailer
+        $sql = "SELECT film.id, film.titolo, film.genere, film.descrizione, film.regista, film.durata, film.lingua, film.settings, film.casa_produttrice, film.trailer
                 FROM film  
-                WHERE cod_film = $cod_film"; 
+                WHERE id = $film_id"; 
         $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
         if ($ris->num_rows == 0) {
             die ("Film non trovato!");
         } else {
             $riga = $ris->fetch_assoc();
             $titolo = $riga['titolo'];
-            $descrizione_txt = $riga['descrizione_txt'];
+            $descrizione = $riga['descrizione'];
             $regista = $riga["regista"];
             $durata = $riga["durata"];
             $genere = $riga["genere"];
@@ -59,7 +59,7 @@
                             <label for="r5"></label>
                         </div>
                         <div class="riassunto"><h1>Riassunto</h1>
-                            <p>$descrizione_txt
+                            <p>$descrizione
                                 </p>
                         </div>
                         <div class="caratteristiche">

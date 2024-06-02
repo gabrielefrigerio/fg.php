@@ -31,7 +31,7 @@
                     <?php
                         $sql = "SELECT film.titolo 
 						FROM film  
-						WHERE film.genere='$genere'";
+						WHERE film.genere='$genere' AND film.media = 'Film'";
 
                         $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
                         if ($ris->num_rows == 0) {

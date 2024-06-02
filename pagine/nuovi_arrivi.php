@@ -21,7 +21,7 @@
                     <li class="card-item">
                         <a href="#">
                             <figure class="card">
-                                <img src="../immagini/Film/Film D'avventura/Fa-Dune.jpg">
+                                <img src="../immagini/Film/avventura/Dune 2.jpg">
                                 <figcaption>Dune 2</figcaption>
                             </figure>
                         </a>
@@ -29,7 +29,7 @@
                     <li class="card-item">
                         <a href="#">
                             <figure class="card">
-                                <img src="../immagini/Film/Film D'azione/beekeeper.jpg">
+                                <img src="../immagini/Film/azione/beekeeper.jpg">
                                 <figcaption>Beekeeper</figcaption>
                             </figure>
                         </a>
@@ -37,7 +37,7 @@
                     <li class="card-item">
                         <a href="#">
                             <figure class="card">
-                                <img src="../immagini/Serie/Animazione per adulti/Habin Hotel.jpg">
+                                <img src="../immagini/Serie/Animazione/Hazbin Hotel.jpg">
                                 <figcaption>Hazbin Hotel</figcaption>
                             </figure>
                         </a>
@@ -45,7 +45,7 @@
                     <li class="card-item">
                         <a href="#">
                             <figure class="card">
-                                <img src="../immagini/Serie/Serie drammatiche/the bear.jpg">
+                                <img src="../immagini/Serie/drammatico/the bear.jpg">
                                 <figcaption>The Bear</figcaption>
                             </figure>
                         </a>
@@ -53,7 +53,7 @@
                     <li class="card-item">
                         <a href="#">
                             <figure class="card">
-                                <img src="../immagini/Film/Film Romantici/slatburn.jpg">
+                                <img src="../immagini/Film/romantico/saltburn.jpg">
                                 <figcaption>Saltburn</figcaption>
                             </figure>
                         </a>
@@ -61,7 +61,7 @@
                     <li class="card-item">
                         <a href="#">
                             <figure class="card">
-                                <img src="../immagini/Film/Film Drammatici/the Iron claw.jpg">
+                                <img src="../immagini/Film/drammatico/the Iron claw.jpg">
                                 <figcaption>The Iron Claw</figcaption>
                             </figure>
                         </a>

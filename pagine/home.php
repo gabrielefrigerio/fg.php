@@ -20,25 +20,22 @@
         <div class="slider-wrapper">
           <button id="prev-slide" class="slide-button material-symbols-rounded"> </button>
           <ul class="image-list">
-            <img class="image-item" src="../immagini/Film/film_dazione/beekeeper.jpg"  />
-            <img class="image-item" src="../immagini/Film/film_horror/il silenzio degli innocent i.jpg"  />
-            <img class="image-item" src="../immagini/Film/film_drammatici/c'era una volta ad hollywood.jpg"  />
-            <img class="image-item" src="../immagini/Film/film_commedia/forrest gump.jpg"  />
-            <img class="image-item" src="../immagini/Serie/Serie d'azione/breaking bad.jpg"  />
-            <img class="image-item" src="../immagini/Serie/Serie drammatiche/better call saul.jpg"  />
-            <img class="image-item" src="../immagini/Serie/Serie d'azione/Suburra_Vertical-Italian_RGB-1.avif"  />
-            <img class="image-item" src="../immagini/Serie/Serie d'azione/gomorra.jpeg  "/>
-            <img class="image-item" src="../immagini/Film/film_dazione/fight club.jpg"  />
-            <img class="image-item" src="../immagini/Film/film_drammatici/the Iron claw.jpg"  />
-            <img class="image-item" src="../immagini/Film/film_commedia/il gande lebowski.jpg"  />
-            <img class="image-item" src="../immagini/Film/film_drammatici/joker.jpg"  />
-            <img class="image-item" src="../immagini/Film/film_drammatici/oppenheimer.jpg"  />
-            <img class="image-item" src="../immagini/Film/film_dazione/bullet train.jpg"  />
-            <img class="image-item" src="../immagini/Film/film_dazione/mad max.jpg"  />
-            <img class="image-item" src="../immagini/Film/film_horror/the whale.jpg"  />
-            <img class="image-item" src="../immagini/Serie/Serie drammatiche/atlanta.jpg"  />
-            <img class="image-item" src="../immagini/Serie/Animazione per adulti/Habin Hotel.jpg"  />
-            <img class="image-item" src="../immagini/Film/film_western/django.jpg"  />
+            <?php
+              require("../data/connessione_db.php");
+              $sql = "SELECT film.genere, film.titolo, film.media
+                      FROM film  
+                      WHERE copertina = TRUE"; 
+              $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
+              foreach($ris as $film){
+                $media = $film['media'];
+                $titolo = $film['titolo'];
+                $genere = $film['genere'];
+                echo <<<EOD
+                  <p>$media, $genere, $titolo </p>
+                  <img class="image-item" src="../immagini/$media/$genere/$titolo.jpg"/>
+                EOD;
+              }
+            ?>
           </ul>
           <button id="next-slide" class="slide-button material-symbols-rounded"> </button>
         </div>
@@ -54,17 +51,17 @@
         <div class="movie-cards">
           <?php
             $preferiti = [0,4,5,0];
-            $i = 1;
+            //$i = 1;
             
-            foreach($preferiti as $cod_film){
+            foreach($preferiti as $film_id){
               require("../data/connessione_db.php");
-              $sql = "SELECT film.cod_film, film.titolo, film.genere, film.descr_breve, film.voto, film.durata, film.data
+              $sql = "SELECT film.id, film.titolo, film.genere, film.descr_breve, film.voto, film.durata, film.data
                 FROM film  
-                WHERE cod_film = $cod_film";
+                WHERE id = $film_id";
               $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
 
               $riga = $ris->fetch_assoc();
-              $i = $i +1;
+              //$i = $i +1;
               $titolo = $riga['titolo'];
               $descr_breve = $riga['descr_breve'];
               $voto = $riga["voto"];
@@ -74,8 +71,8 @@
 
               echo <<<EOD
                 <div class="card">
-                  <a href="scheda_film.php?cod_film=$cod_film">
-                    <img src="../immagini/Film/$genere/$titolo.jpg" alt="poster$i" />
+                  <a href="scheda_film.php?film_id=$film_id">
+                    <img src="../immagini/Film/$genere/$titolo.jpg"/>
                     <div class="content">
                       <h1 class="name">$titolo</h1>
                       <h3 class="infos">

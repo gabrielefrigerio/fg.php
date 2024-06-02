@@ -19,7 +19,7 @@
             <div class="grid-immagini">
                 <ul class="galleria">
                     <?php
-                        $generi = ['anim_adulti', 'serie_dazione', 'serie_davventura', 'serie_drammatiche'];
+                        $generi = ['animazione', 'azione', 'avventura', 'drammatico'];
                         foreach($generi as $genere){
                             echo <<<EOD
                                 <li class="card-item">

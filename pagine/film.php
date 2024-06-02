@@ -19,13 +19,13 @@
             <div class="grid-immagini">
                 <ul class="galleria">
                     <?php
-                        $ris = ['film_commedia','film_davventura','film_dazione','film_drammatici','film_horror','film_western','film_romantici'];
+                        $ris = ['commedia','avventura','azione','drammatico','horror','western','romantico'];
                         foreach($ris as $genere){
                             echo <<<EOD
                                 <li class="card-item">
                                     <a href="generi_film.php?genere=$genere">
                                         <figure class="card">
-                                            <img src="../immagini/Film/$genere.png">
+                                            <img src="../immagini/Film/film_$genere.png">
                                             <figcaption>$genere</figcaption>
                                         </figure>
                                     </a>

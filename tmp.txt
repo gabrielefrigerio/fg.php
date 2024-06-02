@@ -1,0 +1,19 @@
+<img class="image-item" src="../immagini/Film/film_dazione/beekeeper.jpg"  />
+            <img class="image-item" src="../immagini/Film/film_horror/Il silenzio degli innocenti.jpg"  />
+            <img class="image-item" src="../immagini/Film/film_drammatici/C era una volta ad hollywood.jpg"  />
+            <img class="image-item" src="../immagini/Film/film_commedia/Forrest gump.jpg"  />
+            <img class="image-item" src="../immagini/Serie/Serie d'azione/Breaking bad.jpg"  />
+            <img class="image-item" src="../immagini/Serie/Serie drammatiche/Better call saul.jpg"  />
+            <img class="image-item" src="../immagini/Serie/Serie d'azione/Suburra_Vertical-Italian_RGB-1.avif"  />
+            <img class="image-item" src="../immagini/Serie/Serie d'azione/gomorra.jpeg  "/>
+            <img class="image-item" src="../immagini/Film/film_dazione/fight club.jpg"  />
+            <img class="image-item" src="../immagini/Film/film_drammatici/the Iron claw.jpg"  />
+            <img class="image-item" src="../immagini/Film/film_commedia/il gande lebowski.jpg"  />
+            <img class="image-item" src="../immagini/Film/film_drammatici/joker.jpg"  />
+            <img class="image-item" src="../immagini/Film/film_drammatici/oppenheimer.jpg"  />
+            <img class="image-item" src="../immagini/Film/film_dazione/bullet train.jpg"  />
+            <img class="image-item" src="../immagini/Film/film_dazione/mad max.jpg"  />
+            <img class="image-item" src="../immagini/Film/film_horror/the whale.jpg"  />
+            <img class="image-item" src="../immagini/Serie/Serie drammatiche/atlanta.jpg"  />
+            <img class="image-item" src="../immagini/Serie/Animazione per adulti/Habin Hotel.jpg"  />
+            <img class="image-item" src="../immagini/Film/film_western/django.jpg"  />
