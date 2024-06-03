@@ -23,3 +23,16 @@
                         <a href="#"><i class="fa-solid fa-bookmark"></i></a>
                         <a href="#"><i class="fa-solid fa-share"></i></a>
                       </div>
+
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "film-real";
+
+$conn = new mysqli($servername, $username, $password, $dbname, "3007");
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>

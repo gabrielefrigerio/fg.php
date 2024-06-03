@@ -21,7 +21,7 @@
                     <li class="card-item">
                         <a href="#">
                             <figure class="card">
-                                <img src="../immagini/Film/Western/il buono il brutto e il cattivo.jpg">
+                                <img src="../immagini/Film/western/il buono il brutto e il cattivo.jpg">
                                 <figcaption>Il buono il brutto e il cattivo</figcaption>
                             </figure>
                         </a>
@@ -29,7 +29,7 @@
                     <li class="card-item">
                         <a href="#">
                             <figure class="card">
-                                <img src="../immagini/Film/Film Drammatici/scarface-1983-poster.avif">
+                                <img src="../immagini/Film/drammatico/scarface-1983-poster.avif">
                                 <figcaption>Scarface</figcaption>
                             </figure>
                         </a>
@@ -37,7 +37,7 @@
                     <li class="card-item">
                         <a href="#">
                             <figure class="card">
-                                <img src="../immagini/Film/Film D'avventura/2001.jpg">
+                                <img src="../immagini/Film/avventura/2001.jpg">
                                 <figcaption>2001</figcaption>
                             </figure>
                         </a>
@@ -45,7 +45,7 @@
                     <li class="card-item">
                         <a href="#">
                             <figure class="card">
-                                <img src="../immagini/Film/Western/per qualche dollaro in più.jpg">
+                                <img src="../immagini/Film/western/per qualche dollaro in più.jpg">
                                 <figcaption>per qualche dollaro in più</figcaption>
                             </figure>
                         </a>
@@ -53,7 +53,7 @@
                     <li class="card-item">
                         <a href="#">
                             <figure class="card">
-                                <img src="../immagini/Film/film Horror/The shining.jpg">
+                                <img src="../immagini/Film/horror/The shining.jpg">
                                 <figcaption>The shining</figcaption>
                             </figure>
                         </a>
@@ -61,7 +61,7 @@
                     <li class="card-item">
                         <a href="#">
                             <figure class="card">
-                                <img src="../immagini/Film/Film Drammatici/la-dolce-vita-1960-poster.avif">
+                                <img src="../immagini/Film/drammatico/la-dolce-vita-1960-poster.avif">
                                 <figcaption>La dolce vita</figcaption>
                             </figure>
                         </a>

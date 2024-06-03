@@ -1,12 +1,6 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "film-real";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+<?php 
+    $conn = new mysqli("localhost", "root", "","film-real", "3307");
+    if($conn->connect_error){
+        die("<p>Connessione al server non riuscita: ".$conn->connect_error."</p>");
+    }
 ?>
