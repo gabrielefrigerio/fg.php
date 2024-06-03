@@ -18,55 +18,31 @@
 
             <div class="grid-immagini">
                 <ul class="galleria">
-                    <li class="card-item">
-                        <a href="#">
-                            <figure class="card">
-                                <img src="../immagini/Film/avventura/Dune 2.jpg">
-                                <figcaption>Dune 2</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="card-item">
-                        <a href="#">
-                            <figure class="card">
-                                <img src="../immagini/Film/azione/beekeeper.jpg">
-                                <figcaption>Beekeeper</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="card-item">
-                        <a href="#">
-                            <figure class="card">
-                                <img src="../immagini/Serie/Animazione/Hazbin Hotel.jpg">
-                                <figcaption>Hazbin Hotel</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="card-item">
-                        <a href="#">
-                            <figure class="card">
-                                <img src="../immagini/Serie/drammatico/the bear.jpg">
-                                <figcaption>The Bear</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="card-item">
-                        <a href="#">
-                            <figure class="card">
-                                <img src="../immagini/Film/romantico/saltburn.jpg">
-                                <figcaption>Saltburn</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li class="card-item">
-                        <a href="#">
-                            <figure class="card">
-                                <img src="../immagini/Film/drammatico/the Iron claw.jpg">
-                                <figcaption>The Iron Claw</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                
+                    <?php
+                        require("../data/connessione_db.php");
+                        //$nuovi = [1, 24, 18, 25, 23, 12];
+                        $sql = "SELECT film.id, film.titolo, film.genere, film.media
+                              FROM film  
+                              WHERE anno = 2024";
+                        $nuovi = $conn->query($sql) or die("<p>Query fallita!</p>");
+                        //$nuovi = $ris->fetch_assoc();
+                        foreach($nuovi as $film){
+                            $titolo = $film['titolo'];
+                            $media = $film['media'];
+                            $genere = $film["genere"];
+              
+                            echo <<<EOD
+                                <li class="card-item">
+                                    <a href="#">
+                                        <figure class="card">
+                                            <img src="../immagini/$media/$genere/$titolo.jpg">
+                                            <figcaption>$titolo</figcaption>
+                                        </figure>
+                                    </a>
+                                </li>
+                            EOD;
+                        }
+                    ?>
                 </ul>
             </div>
         </div>
@@ -75,18 +51,15 @@
             <?php require('pezzi/footer.php') ?>
         </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $(".header_bar").click(function(e){
-                $(".header_menu").toggleClass('is-open');
-                e.preventDefault();
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".header_bar").click(function(e){
+                    $(".header_menu").toggleClass('is-open');
+                    e.preventDefault();
+                });
             });
-
-        });
-
-    </script>
+        </script>
     </body>
 </html>
             

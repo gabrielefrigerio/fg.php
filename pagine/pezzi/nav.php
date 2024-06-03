@@ -1,3 +1,11 @@
+<?php
+    if(isset($_SESSION['pre'])){
+        $origin = $_SESSION['pre'];
+    }
+    else {
+        $origin = "";
+    }
+?>
 <div class="header clearfix">
     <a href="home.php" class="header_logo"><img src="pezzi/logor.jpg"></a>
 
@@ -45,6 +53,11 @@
             }
             elseif(basename($_SERVER['PHP_SELF']) == "generi_serie.php") {
                 echo "<li class='header_menu_item'><a href='serie_tv.php'>Torna indietro</a></li>";
+            }
+            elseif(basename($_SERVER['PHP_SELF']) == "scheda_film.php") {
+                echo <<<EOD
+                <li class="header_menu_item"><a href="$origin.php">Torna indietro</a></li>
+                EOD;
             }
         ?>
     </ul>

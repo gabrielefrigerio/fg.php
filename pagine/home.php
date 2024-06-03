@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  $_SESSION['pre']= "home";
+?>
 <html>
   <head >
     <meta charset="UTF-8" />
@@ -35,6 +39,7 @@
                   <img class="image-item" src="../immagini/$media/$genere/$titolo.jpg"/>
                 EOD;
               }
+              
             ?>
           </ul>
           <button id="next-slide" class="slide-button material-symbols-rounded"> </button>
@@ -50,42 +55,35 @@
       <div class="container">
         <div class="movie-cards">
           <?php
-            $preferiti = [0,4,5,0];
-            //$i = 1;
-            
-            foreach($preferiti as $film_id){
+            $main = [0,4,5,18, 24];
+            foreach($main as $film_id){
               require("../data/connessione_db.php");
-              $sql = "SELECT film.id, film.titolo, film.genere, film.descr_breve, film.voto, film.durata, film.data
+              $sql = "SELECT film.id, film.titolo, film.genere, film.descr_breve, film.voto, film.durata, film.anno, film.media
                 FROM film  
                 WHERE id = $film_id";
               $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
-
               $riga = $ris->fetch_assoc();
-              //$i = $i +1;
+
               $titolo = $riga['titolo'];
               $descr_breve = $riga['descr_breve'];
               $voto = $riga["voto"];
               $durata = $riga["durata"];
               $genere = $riga["genere"];
-              $data = $riga["data"];
+              $anno = $riga["anno"];
+              $media = $riga["media"];
 
               echo <<<EOD
                 <div class="card">
                   <a href="scheda_film.php?film_id=$film_id">
-                    <img src="../immagini/Film/$genere/$titolo.jpg"/>
+                    <img src="../immagini/$media/$genere/$titolo.jpg"/>
                     <div class="content">
                       <h1 class="name">$titolo</h1>
                       <h3 class="infos">
-                        <i class="fa-solid fa-star"></i> $voto | $data | $durata Min
+                        <i class="fa-solid fa-star"></i> $voto | $anno | $durata Min
                       </h3>
                       <p class="short-desc">
                         $descr_breve
                       </p>
-                      <div class="icons">
-                        <a href="#"><i class="fa-solid fa-heart"></i></a>
-                        <a href="#"><i class="fa-solid fa-bookmark"></i></a>
-                        <a href="#"><i class="fa-solid fa-share"></i></a>
-                      </div>
                     </div>
                   </a>
                 </div>

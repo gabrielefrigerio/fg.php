@@ -4,7 +4,7 @@
     } else {
         $film_id = $_GET["film_id"];
         require("../data/connessione_db.php");
-        $sql = "SELECT film.id, film.titolo, film.genere, film.descrizione, film.regista, film.durata, film.lingua, film.settings, film.casa_produttrice, film.trailer
+        $sql = "SELECT film.id, film.titolo, film.genere, film.descrizione, film.regista, film.durata, film.lingua, film.settings, film.casa_produttrice, film.trailer, film.media
                 FROM film  
                 WHERE id = $film_id"; 
         $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
@@ -21,8 +21,11 @@
             $settings = $riga["settings"];
             $casa_produttrice = $riga["casa_produttrice"];
             $trailer = $riga["trailer"];
+            $media = $riga["media"];
         }
     }
+    session_start();
+    $origin = $_SESSION['pre'];
 ?>
 
 <html>
@@ -70,7 +73,7 @@
                             <h2>Casa produttrice:</h2><p>$casa_produttrice</p>
                             <h2>Lingua originale:</h2><p>$lingua</p>
                         </div>
-                        <div class="image"><img src="../immagini/Film/$genere/$titolo.jpg"></div>
+                        <div class="image"><img src="../immagini/$media/$genere/$titolo.jpg"></div>
                         <a target="_blank" href="$trailer" rel="noopener" id="trail">
                             <div class="trailer">
                             Trailer

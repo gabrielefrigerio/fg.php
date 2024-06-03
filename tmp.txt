@@ -17,3 +17,9 @@
             <img class="image-item" src="../immagini/Serie/Serie drammatiche/atlanta.jpg"  />
             <img class="image-item" src="../immagini/Serie/Animazione per adulti/Habin Hotel.jpg"  />
             <img class="image-item" src="../immagini/Film/film_western/django.jpg"  />
+
+<div class="icons">
+                        <a href="#"><i class="fa-solid fa-heart"></i></a>
+                        <a href="#"><i class="fa-solid fa-bookmark"></i></a>
+                        <a href="#"><i class="fa-solid fa-share"></i></a>
+                      </div>
