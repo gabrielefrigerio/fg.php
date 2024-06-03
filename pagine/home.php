@@ -8,7 +8,7 @@
     <meta charset="UTF-8" />
     <title>The Film Review.</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" href="../CSS/styler.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <script src="../JAVA/script.js" defer></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,23 +25,19 @@
         <div class="slider-wrapper">
           <button id="prev-slide" class="slide-button material-symbols-rounded"> </button>
           <ul class="image-list">
-            <?php
-              require("../data/connessione_db.php");
-              $sql = "SELECT film.genere, film.titolo, film.media
-                      FROM film  
-                      WHERE copertina = TRUE"; 
-              $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
-              foreach($ris as $film){
-                $media = $film['media'];
-                $titolo = $film['titolo'];
-                $genere = $film['genere'];
-                echo <<<EOD
-                  <p>$media, $genere, $titolo </p>
-                  <img class="image-item" src="../immagini/$media/$genere/$titolo.jpg"/>
-                EOD;
-              }
-              
-            ?>
+            <img class="image-item" src="../immagini/Film/Film D'azione/beekeeper.jpg"  />
+            <img class="image-item" src="../immagini/Film/film Horror/il silenzio degli innocent i.jpg"  />
+            <img class="image-item" src="../immagini/Film/Film Drammatici/c'era una volta ad hollywood.jpg"  />
+            <img class="image-item" src="../immagini/Film/Film commedia/forrest gump.jpg"  />
+            <img class="image-item" src="../immagini/Serie/Serie d'azione/breaking bad.jpg"  />
+            <img class="image-item" src="../immagini/Serie/Serie drammatiche/better call saul.jpg"  />
+            <img class="image-item" src="../immagini/Serie/Serie d'azione/Suburra_Vertical-Italian_RGB-1.avif"  />
+            <img class="image-item" src="../immagini/Serie/Serie d'azione/gomorra.jpeg  "/>
+            <img class="image-item" src="../immagini/Film/Film D'azione/fight club.jpg"  />
+            <img class="image-item" src="../immagini/Film/Film Drammatici/the Iron claw.jpg"  />
+            <img class="image-item" src="../immagini/Film/Film commedia/il gande lebowski.jpg"  />
+            <img class="image-item" src="../immagini/Serie/Serie drammatiche/atlanta.jpg"  />
+            <img class="image-item" src="../immagini/Film/Western/django.jpg"  />
           </ul>
           <button id="next-slide" class="slide-button material-symbols-rounded"> </button>
         </div>
@@ -51,7 +47,7 @@
           </div>
         </div>
       </div>
-      <a href="preferiti.php">preferiti</a>
+
       <h1>I <span></span> Preferiti</h1>
 
       <form action="" method="post" class = "ricerca">
@@ -96,9 +92,10 @@
                     </div>
                   </a>
                 </div>
-              EOD;
-            }
-          ?>
+              </div>
+            </a>
+          </div>
+                  
         </div>
       </div>
     </div>
