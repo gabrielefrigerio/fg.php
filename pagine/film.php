@@ -18,21 +18,63 @@
 
             <div class="grid-immagini">
                 <ul class="galleria">
-                    <?php
-                        $ris = ['commedia','avventura','azione','drammatico','horror','western','romantico'];
-                        foreach($ris as $genere){
-                            echo <<<EOD
-                                <li class="card-item">
-                                    <a href="generi_film.php?genere=$genere">
-                                        <figure class="card">
-                                            <img src="../immagini/Film/film_$genere.png">
-                                            <figcaption>$genere</figcaption>
-                                        </figure>
-                                    </a>
-                                </li>
-                            EOD;
-                        }
-                    ?>
+                    <li class="card-item">
+                        <a href="../Film/generi/filmd'avventura.php">
+                            <figure class="card">
+                                <img src="../immagini/Film/Film Avventura.png">
+                                <figcaption>Film d'avventura</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="card-item">
+                        <a href="../Film/generi/Horror.php">
+                            <figure class="card">
+                                <img src="../immagini/Film/Film Horror.png">
+                                <figcaption>Horror</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="card-item">
+                        <a href="../Film/generi/filmdazione.php">
+                            <figure class="card">
+                                <img src="../immagini/Film/Film azione.png">
+                                <figcaption>Film d'azione</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="card-item">
+                        <a href="../Film/generi/western.php">
+                            <figure class="card">
+                                <img src="../immagini/Film/Film western.png">
+                                <figcaption>Western</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="card-item">
+                        <a href="../Film/generi/filmdrammatici.php">
+                            <figure class="card">
+                                <img src="../immagini/Film/Film Drammatici.png">
+                                <figcaption>Film Drammatici</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="card-item">
+                        <a href="../Film/generi/filmromatici.php">
+                            <figure class="card">
+                                <img src="../immagini/Film/Film romantici.png">
+                                <figcaption>Romantici</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="card-item">
+                        <a href="../Film/generi/filmcommedie.php">
+                            <figure class="card">
+                                <img src="../immagini/Film/Commedie.png">
+                                <figcaption>Commedie</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                
                 </ul>
             </div>
         </div>
@@ -48,10 +90,12 @@
             $(".header_bar").click(function(e){
                 $(".header_menu").toggleClass('is-open');
                 e.preventDefault();
-            });
-        });
-    </script>
 
+            });
+
+        });
+
+    </script>
     </body>
 </html>
             

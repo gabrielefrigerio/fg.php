@@ -15,24 +15,41 @@
             <header>
                 <?php require('pezzi/nav.php') ?>
             </header>
-            
             <div class="grid-immagini">
                 <ul class="galleria">
-                    <?php
-                        $generi = ['animazione', 'azione', 'avventura', 'drammatico'];
-                        foreach($generi as $genere){
-                            echo <<<EOD
-                                <li class="card-item">
-                                    <a href="generi_serie.php?genere=$genere">
-                                        <figure class="card">
-                                            <img src="../immagini/Serie/$genere.png">
-                                            <figcaption>$genere</figcaption>
-                                        </figure>
-                                    </a>
-                                </li>
-                            EOD;
-                        }
-                    ?>
+                    <li class="card-item">
+                        <a href="../Serie Tv/animazione per adulti/animazione per adulti.html">
+                            <figure class="card">
+                                <img src="../immagini/Serie/Animazione per adulti.png">
+                                <figcaption>Animazione per adulti</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="card-item">
+                        <a href="../Serie Tv/serie d'azione/seried'azione.html">
+                            <figure class="card">
+                                <img src="../immagini/Serie/Serie d'azione.png">
+                                <figcaption>Serie d' azione</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="card-item">
+                        <a href="../Serie Tv/serie d'avventura/seried'avventura.html">
+                            <figure class="card">
+                                <img src="../immagini/Serie/Serie d'avventura.png">
+                                <figcaption>Serie d'avventura</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="card-item">
+                        <a href="../Serie Tv/serie drammatiche/seriedrammatiche.html">
+                            <figure class="card">
+                                <img src="../immagini/Serie/Serie drammatiche.png">
+                                <figcaption>Serie drammatiche</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                
                 </ul>
             </div>
         </div>
@@ -41,15 +58,18 @@
             <?php require('pezzi/footer.php') ?>
         </footer>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $(".header_bar").click(function(e){
-                    $(".header_menu").toggleClass('is-open');
-                    e.preventDefault();
-                });
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".header_bar").click(function(e){
+                $(".header_menu").toggleClass('is-open');
+                e.preventDefault();
+
             });
-        </script>
+
+        });
+
+    </script>
     </body>
 </html>
             

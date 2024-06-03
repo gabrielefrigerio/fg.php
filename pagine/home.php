@@ -1,13 +1,9 @@
-<?php
-  session_start();
-  $_SESSION['pre']= "home";
-?>
 <html>
   <head >
     <meta charset="UTF-8" />
     <title>The Film Review.</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" href="../CSS/styler.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <script src="../JAVA/script.js" defer></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,23 +20,19 @@
         <div class="slider-wrapper">
           <button id="prev-slide" class="slide-button material-symbols-rounded"> </button>
           <ul class="image-list">
-            <?php
-              require("../data/connessione_db.php");
-              $sql = "SELECT film.genere, film.titolo, film.media
-                      FROM film  
-                      WHERE copertina = TRUE"; 
-              $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
-              foreach($ris as $film){
-                $media = $film['media'];
-                $titolo = $film['titolo'];
-                $genere = $film['genere'];
-                echo <<<EOD
-                  <p>$media, $genere, $titolo </p>
-                  <img class="image-item" src="../immagini/$media/$genere/$titolo.jpg"/>
-                EOD;
-              }
-              
-            ?>
+            <img class="image-item" src="../immagini/Film/Film D'azione/beekeeper.jpg"  />
+            <img class="image-item" src="../immagini/Film/film Horror/il silenzio degli innocent i.jpg"  />
+            <img class="image-item" src="../immagini/Film/Film Drammatici/c'era una volta ad hollywood.jpg"  />
+            <img class="image-item" src="../immagini/Film/Film commedia/forrest gump.jpg"  />
+            <img class="image-item" src="../immagini/Serie/Serie d'azione/breaking bad.jpg"  />
+            <img class="image-item" src="../immagini/Serie/Serie drammatiche/better call saul.jpg"  />
+            <img class="image-item" src="../immagini/Serie/Serie d'azione/Suburra_Vertical-Italian_RGB-1.avif"  />
+            <img class="image-item" src="../immagini/Serie/Serie d'azione/gomorra.jpeg  "/>
+            <img class="image-item" src="../immagini/Film/Film D'azione/fight club.jpg"  />
+            <img class="image-item" src="../immagini/Film/Film Drammatici/the Iron claw.jpg"  />
+            <img class="image-item" src="../immagini/Film/Film commedia/il gande lebowski.jpg"  />
+            <img class="image-item" src="../immagini/Serie/Serie drammatiche/atlanta.jpg"  />
+            <img class="image-item" src="../immagini/Film/Western/django.jpg"  />
           </ul>
           <button id="next-slide" class="slide-button material-symbols-rounded"> </button>
         </div>
@@ -50,46 +42,94 @@
           </div>
         </div>
       </div>
-      <a href="preferiti.php">preferiti</a>
+
       <h1>I <span></span> Preferiti</h1>
       <div class="container">
         <div class="movie-cards">
-          <?php
-            $main = [0,4,5,18, 24];
-            foreach($main as $film_id){
-              require("../data/connessione_db.php");
-              $sql = "SELECT film.id, film.titolo, film.genere, film.descr_breve, film.voto, film.durata, film.anno, film.media
-                FROM film  
-                WHERE id = $film_id";
-              $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
-              $riga = $ris->fetch_assoc();
 
-              $titolo = $riga['titolo'];
-              $descr_breve = $riga['descr_breve'];
-              $voto = $riga["voto"];
-              $durata = $riga["durata"];
-              $genere = $riga["genere"];
-              $anno = $riga["anno"];
-              $media = $riga["media"];
-
-              echo <<<EOD
-                <div class="card">
-                  <a href="scheda_film.php?film_id=$film_id">
-                    <img src="../immagini/$media/$genere/$titolo.jpg"/>
-                    <div class="content">
-                      <h1 class="name">$titolo</h1>
-                      <h3 class="infos">
-                        <i class="fa-solid fa-star"></i> $voto | $anno | $durata Min
-                      </h3>
-                      <p class="short-desc">
-                        $descr_breve
-                      </p>
-                    </div>
-                  </a>
+          <div class="card">
+            <a href="../Film/schedaf/dune.html">
+              <img src="../immagini/Film/Film D'avventura/Fa-Dune.jpg" alt="poster1" />
+              <div class="content">
+                <h1 class="name">Dune 2 (2024)</h1>
+                <h3 class="infos">
+                  <i class="fa-solid fa-star"></i> 4.7/5 | 2024-02-29 | 165 Min
+                </h3>
+                <p class="short-desc">
+                  Dune - Parte Due, film diretto da Denis Villeneuve, 
+                  è il secondo capitolo della saga sci-fi tratta dal romanzo di Frank Herbert.
+                </p>
+                <div class="icons">
+                  <a href="#"><i class="fa-solid fa-heart"></i></a>
+                  <a href="#"><i class="fa-solid fa-bookmark"></i></a>
+                  <a href="#"><i class="fa-solid fa-share"></i></a>
                 </div>
-              EOD;
-            }
-          ?>
+              </div>
+            </a>
+  
+          </div>
+
+          <div class="card">
+            <a href="../Film/schedaf/lala.html">
+              <img src="../immagini/Film/Film Romantici/la la land.jpg" alt="poster2" />
+              <div class="content">
+                <h1 class="name">La La Land (2016)</h1>
+                <h3 class="infos">
+                  <i class="fa-solid fa-star"></i> 3.9/5 | 2016-07-19 | 128 Min
+                </h3>
+                <p class="short-desc">
+                  La La Land è un musical contemporaneo del 2016 diretto da Damien Chazelle.
+                  Emma stone nel 2017 vinse l'oscar per la miglior attrice protagonista.
+                </p>
+                <div class="icons">
+                  <a href="#"><i class="fa-solid fa-heart"></i></a>
+                  <a href="#"><i class="fa-solid fa-bookmark"></i></a>
+                  <a href="#"><i class="fa-solid fa-share"></i></a>
+                </div>
+              </div>
+            </a>
+          </div>
+                  
+          <div class="card">
+            <a href="../Film/schedaf/wolf.html">
+              <img src="../immagini/Film/Film Drammatici/The Wolf of Street.jpg" alt="poster3" />
+              <div class="content">
+                <h1 class="name">The Wolf of Wall Street (2013)</h1>
+                <h3 class="infos">
+                  <i class="fa-solid fa-star"></i> 4.1/5 | 2013-06-29 | 128 Min
+                </h3>
+                <p class="short-desc">
+                  The Wolf of Wall Street è un film del 2013 diretto da Martin Scorsese
+                </p>
+                <div class="icons">
+                  <a href="#"><i class="fa-solid fa-heart"></i></a>
+                  <a href="#"><i class="fa-solid fa-bookmark"></i></a>
+                  <a href="#"><i class="fa-solid fa-share"></i></a>
+                </div>
+              </div>
+            </a>
+          </div>
+                  
+          <div class="card">
+            <a href="../Film/schedaf/ilbuono.html">
+              <img src="../immagini/Film/Western/il buono il brutto e il cattivo.jpg" alt="poster4" />
+              <div class="content">
+                <h1 class="name">Il Buono, Il Brutto e Il Cattivo (1966)</h1>
+                <h3 class="infos">
+                  <i class="fa-solid fa-star"></i> 4/5 | 1966-01-25 | 175 Min
+                </h3>
+                <p class="short-desc">
+                  Il Buono, il Brutto, il Cattivo è un film western del 1966 diretto da Sergio Leone
+                </p>
+                <div class="icons">
+                  <a href="#"><i class="fa-solid fa-heart"></i></a>
+                  <a href="#"><i class="fa-solid fa-bookmark"></i></a>
+                  <a href="#"><i class="fa-solid fa-share"></i></a>
+                </div>
+              </div>
+            </a>
+          </div>
+                  
         </div>
       </div>
     </div>
