@@ -1,6 +1,7 @@
 <?php
   session_start();
   $_SESSION['pre']= "home";
+  if (isset($_POST["input"])) $input = $_POST["input"]; else $input = "";
 ?>
 <html>
   <head >
@@ -52,20 +53,28 @@
       </div>
       <a href="preferiti.php">preferiti</a>
       <h1>I <span></span> Preferiti</h1>
+
+      <form action="" method="post" class = "ricerca">
+        <table class="tab_input">
+            <tr>
+                <td><label for="input">Input: </label></td>
+                <td><input type="text" name="input" id="input" value = "<?php echo $input ?>"></td>
+            </tr>
+        </table>
+        <input type="submit" value="Cerca">
+      </form>
+
       <div class="container">
         <div class="movie-cards">
           <?php
-            $main = [0,4,5,18, 24];
-            foreach($main as $film_id){
-              require("../data/connessione_db.php");
-              $sql = "SELECT film.id, film.titolo, film.genere, film.descr_breve, film.voto, film.durata, film.anno, film.media
-                FROM film  
-                WHERE id = $film_id";
-              $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
-              $riga = $ris->fetch_assoc();
-
-              $titolo = $riga['titolo'];
-              $descr_breve = $riga['descr_breve'];
+            require("../data/connessione_db.php");
+            $sql = "SELECT * FROM film WHERE titolo LIKE '%$input%' OR descrizione LIKE '%$input%'";
+            $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
+            //$main = [0,4,5,18, 24];
+            foreach($ris as $riga){
+              $film_id = $riga["id"];
+              $titolo = $riga["titolo"];
+              $descr_breve = $riga["descr_breve"];
               $voto = $riga["voto"];
               $durata = $riga["durata"];
               $genere = $riga["genere"];
@@ -79,7 +88,7 @@
                     <div class="content">
                       <h1 class="name">$titolo</h1>
                       <h3 class="infos">
-                        <i class="fa-solid fa-star"></i> $voto | $anno | $durata Min
+                        $voto | $anno | $durata Min
                       </h3>
                       <p class="short-desc">
                         $descr_breve
