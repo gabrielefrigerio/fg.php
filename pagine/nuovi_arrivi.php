@@ -20,12 +20,10 @@
                 <ul class="galleria">
                     <?php
                         require("../data/connessione_db.php");
-                        //$nuovi = [1, 24, 18, 25, 23, 12];
                         $sql = "SELECT film.id, film.titolo, film.genere, film.media
                               FROM film  
                               WHERE anno = 2024";
                         $nuovi = $conn->query($sql) or die("<p>Query fallita!</p>");
-                        //$nuovi = $ris->fetch_assoc();
                         foreach($nuovi as $film){
                             $titolo = $film['titolo'];
                             $media = $film['media'];

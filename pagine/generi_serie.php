@@ -6,21 +6,20 @@
         require("../data/connessione_db.php");
     }
     session_start();
-    $_SESSION['pre']= "generi_serie";
+    $_SESSION['pre']= "serie_tv";
 ?>
 
 <html>
     <head >
-        <title>Animazione Per adulti</title>
+        <title>TFR | generi serie</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="../CSS/style.css">
         <script src="../JAVA/script.js" defer></script>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">    
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
-
     </head>
+
     <body>
         <div class="contenitore-g">
             <header>
@@ -29,30 +28,30 @@
 
             <div class="grid-immagini">
                 <ul class="galleria">
-                <?php
-                    $sql = "SELECT film.titolo 
-                    FROM film  
-                    WHERE film.genere='$genere' AND film.media = 'Serie'";
+                    <?php
+                        $sql = "SELECT film.titolo 
+                        FROM film  
+                        WHERE film.genere='$genere' AND film.media = 'Serie'";
 
-                    $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
-                    if ($ris->num_rows == 0) {
-                        echo "<p style='text-align:center'>Nessuno";
-                    }
+                        $ris = $conn->query($sql) or die("<p>Query fallita!</p>");
+                        if ($ris->num_rows == 0) {
+                            echo "<p style='text-align:center'>Nessuno";
+                        }
 
-                    foreach($ris as $serie){
-                        $titolo = $serie['titolo'];
-                        echo <<<EOD
-                            <li class="card-item">
-                                <a href="#">
-                                    <figure class="card">
-                                        <img src="../immagini/Serie/$genere/$titolo.jpg">
-                                        <figcaption>$titolo</figcaption>
-                                    </figure>
-                                </a>
-                            </li>
-                        EOD;
-                    }
-                ?>
+                        foreach($ris as $serie){
+                            $titolo = $serie['titolo'];
+                            echo <<<EOD
+                                <li class="card-item">
+                                    <a href="#">
+                                        <figure class="card">
+                                            <img src="../immagini/Serie/$genere/$titolo.jpg">
+                                            <figcaption>$titolo</figcaption>
+                                        </figure>
+                                    </a>
+                                </li>
+                            EOD;
+                        }
+                    ?>
                 </ul>
             </div>          
         </div>

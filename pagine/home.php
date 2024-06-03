@@ -50,7 +50,7 @@
           </div>
         </div>
       </div>
-
+      <a href="preferiti.php">preferiti</a>
       <h1>I <span></span> Preferiti</h1>
       <div class="container">
         <div class="movie-cards">

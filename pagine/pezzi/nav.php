@@ -53,6 +53,9 @@
                 <li class="header_menu_item"><a href="$origin.php">Torna indietro</a></li>
                 EOD;
             }
+            else {
+                echo "<li class='header_menu_item'><a href='home.php'>Home</a></li>";
+            }
         ?>
     </ul>
 </div>

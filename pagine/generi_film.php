@@ -7,13 +7,13 @@
     }
     
     session_start();
-    $_SESSION['pre']= "generi_film";
+    $_SESSION['pre']= "film";
 ?>
 
 
 <html>
-    <head >
-        <title>TFR | generi </title>
+    <head>
+        <title>TFR | generi film</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="../CSS/style.css">
         <script src="../JAVA/script.js" defer></script>
@@ -55,10 +55,8 @@
                             EOD;
                         }
                     ?>
-
                 </ul>
             </div>
-
         </div>
         
         <footer>
