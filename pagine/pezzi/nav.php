@@ -48,13 +48,7 @@
                     echo "<li class='header_menu_item'><a href='dnp.php'>Da non perdere</a></li>";
                 }
             }
-            elseif(basename($_SERVER['PHP_SELF']) == "generi_film.php") {
-                echo "<li class='header_menu_item'><a href='film.php'>Torna indietro</a></li>";
-            }
-            elseif(basename($_SERVER['PHP_SELF']) == "generi_serie.php") {
-                echo "<li class='header_menu_item'><a href='serie_tv.php'>Torna indietro</a></li>";
-            }
-            elseif(basename($_SERVER['PHP_SELF']) == "scheda_film.php") {
+            elseif(basename($_SERVER['PHP_SELF']) == "scheda_film.php" or basename($_SERVER['PHP_SELF']) == "generi_serie.php" or basename($_SERVER['PHP_SELF']) == "generi_film.php") {
                 echo <<<EOD
                 <li class="header_menu_item"><a href="$origin.php">Torna indietro</a></li>
                 EOD;

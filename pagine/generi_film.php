@@ -5,6 +5,9 @@
         $genere = $_GET["genere"];
         require("../data/connessione_db.php");
     }
+    
+    session_start();
+    $_SESSION['pre']= "generi_film";
 ?>
 
 
