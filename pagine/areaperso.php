@@ -17,7 +17,7 @@
 <body>
     <div class="nav">
         <div class="logo">
-            <p><a href="home.php">Logo</a> </p>
+            <p><a href="home.php" class="header_logo"><img src="pezzi/logor.jpg" alt=""></a> </p>
         </div>
 
         <div class="right-links">
@@ -32,8 +32,6 @@
                 $res_Email = $result['email'];
                 $res_id = $result['id'];
             }
-            
-            echo "<a href='edit.php?Id=$res_id'>Cambia account</a>";
             ?>
             <a href="home.php"> <button class="btn">Torna alla home</button> </a>
             <a href="pezzi/logout.php"> <button class="btn">Log Out</button> </a>
@@ -52,10 +50,11 @@
                 <p>La tua email <b><?php echo $res_Email ?></b>.</p>
             </div>
           </div>
-          <div class="bottom">
-            <div class="box">
-                 
-            </div>
+          <div class="box" id="preferiti">
+            <h1 class = "box__titolo"> I tuoi preferiti: </h1>
+            <?php
+                require("preferiti.php");
+            ?>
           </div>
        </div>
 

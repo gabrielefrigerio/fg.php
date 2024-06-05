@@ -1,4 +1,5 @@
 <?php
+    session_start();
     if (!isset($_GET["film_id"])) {
         die("Errore! manca un parametro essenziale per il caricamento del libro!");
     } else {
@@ -24,8 +25,20 @@
             $media = $riga["media"];
         }
     }
-    session_start();
     $origin = $_SESSION['pre'];
+    $id = $_SESSION["id"];
+
+
+    if (isset($_POST['cod_films'])) {
+        $films = $_POST['cod_films'];
+        foreach($films as $film) {
+            //echo $libro . '<br/>';
+            $sql = "UPDATE preferiti
+                    SET id_utente = NULL
+                    WHERE id_film = '".$film."'";
+            $conn->query($sql) or die("<p>Query fallita!</p>");
+        }
+    }
 ?>
 
 <html>
@@ -47,6 +60,10 @@
 
             <?php
                 echo <<<EOD
+                    <form action='' method= 'post'>
+                    <p><input type='checkbox' name='cod_films[]' value='$film_id'/> Spunta per preferiti</p>
+                    <input type='submit' value='Conferma'/>
+                    </form>
                     <div class="container-film">
                         <div class="titolo"><h1>$titolo</h1></div>
                         <div class="rating">
@@ -81,6 +98,7 @@
                         </a>
                     </div>
                 EOD;
+                
             ?>
         </div>
 

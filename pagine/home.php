@@ -50,7 +50,7 @@
       </div>
 
       <h1>I <span></span> Preferiti</h1>
-
+      <a href="preferiti.php">preferiti</a>
       <form action="" method="post" class = "ricerca">
         <table class="tab_input">
             <tr>
@@ -77,7 +77,6 @@
               $genere = $riga["genere"];
               $anno = $riga["anno"];
               $media = $riga["media"];
-
               echo <<<EOD
                 <div class="card">
                   <a href="scheda_film.php?film_id=$film_id">

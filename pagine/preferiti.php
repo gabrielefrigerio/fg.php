@@ -3,7 +3,7 @@
         <meta charset="UTF-8" />
         <title>TFR | Preferiti</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="../CSS/styler.css">
+        <link rel="stylesheet" href="../CSS/styleaccesso.css">
         <script src="../JAVA/script.js" defer></script>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">    
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,10 +12,6 @@
     </head>
     <body>
         <div class="contenitore-g">
-            <header>
-                <?php require('pezzi/nav.php') ?>
-            </header>
-
             <div class="container">
                 <div class="movie-cards">
                     <?php
@@ -23,7 +19,7 @@
                         $sql = "SELECT film.id, film.titolo, film.genere, film.media, film.descr_breve, film.voto, film.durata, film.anno
                               FROM film JOIN preferiti ON preferiti.id_film = film.id
                               JOIN utenti ON utenti.id = preferiti.id_utente
-                              WHERE utenti.id = 1";
+                              WHERE utenti.id = 7";
 
                         $preferiti = $conn->query($sql) or die("<p>Query fallita!</p>");
                         foreach($preferiti as $film){

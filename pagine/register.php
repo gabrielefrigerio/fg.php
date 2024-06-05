@@ -66,11 +66,11 @@
                 </div>
                 <div class="field input">
                     <label for="nome">Nome</label>
-                    <input type="text" name="email" id="email" autocomplete="off" required>
+                    <input type="text" name="nome" id="nome" autocomplete="off" required>
                 </div>
                 <div class="field input">
                     <label for="cognome">Cognome</label>
-                    <input type="text" name="email" id="email" autocomplete="off" required>
+                    <input type="text" name="cognome" id="cognome" autocomplete="off" required>
                 </div>
                 
 
